@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
     <script src="javascripts/flexble.js"></script>
-    <title>KMB互转</title>
+    <title>BHC互转</title>
     <style>
        .arrow{
            width: .3rem;
@@ -32,7 +32,7 @@
 <body>
     <div class="mi-header fixed flex tc">
         <a href="javascript:history.go(-1);" class="back2"></a>
-        <h1 class=" gold mauto ft18">KMB互转</h1>
+        <h1 class=" gold mauto ft18">BHC互转</h1>
         <!-- <a href="javascript:;" class="kefu"></a> -->
     </div>
     <div class="mt45 mb55 plr20 miancolor ptb20 ">
@@ -104,7 +104,7 @@
                     layer_msg("请输入支付密码")
                     return false
                 }
-                initData({url:'/wallet/kmbSend',type:'post',data:{money:number,account_number:account_number,pay_password:pay_password}},function(message){
+                initData({url:'/wallet/BHCSend',type:'post',data:{money:number,account_number:account_number,pay_password:pay_password}},function(message){
                     layer_msg(message)
                     setTimeout(() => {
                         layer_close();
