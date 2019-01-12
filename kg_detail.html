@@ -173,61 +173,9 @@
         <a href="mine.html"><div class="four"></div><span>账户</span></a>
     </div>
     <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <script src="javascripts/main.js"></script>
     <script>
        $(function(){
-           var page=1;
-           var id=get_param('id');
-           function getdata(){
-                initData({url:'/oneLtcReturn',type:'get',data:{page:page,id:id}},function(data){
-                    // console.log(data.today)
-                    $('.today').html(data.totay);
-                    var total=data.ltc_detail.total_value-0;
-                    var surplus_return=data.ltc_detail.surplus_return-0;
-                    var res=(total-surplus_return)/total;
-                    $('.hourper').html(data.ltc_detail.hour_value);
-                    $('.total').html(data.total);
-                    $('.total_value').html(total)
-                    $('.balance').html(surplus_return);
-                    $('.pro').css('width',res*100+'%');
-                    if(data.detail && data.detail.length>0){
-                        renderlist(data.detail)
-                    }else{
-                        layer_msg('没有更多数据了...')
-                    }
-                })
-           }
-           function renderlist(data){
-                var html='';
-               
-                for(var i in data){
-                    console.log(id)
-                    var info=data[i].info.split('-'+id)[0];
-                    html+=`<div class="posRelt ptb10 plr20 bl_box">
-                    <div class="tangle_left abstrot tangle"></div>
-                    <div class="tangle_right abstrot tangle"></div>
-                    <div class="tangle_bottom_left abstrot tangle"></div>
-                    <div class="tangle_bottom_right abstrot tangle"></div>
-                    <div class="miancolor">
-                        <p class="mb10 tl"><span class="ft18 ">+${data[i].value}</span> </p>
-                        <p class="mb10 tl">${info}</p>
-                        <p class="ft10 color85 tl" >${data[i].created_time}</p>
-                    </div>
-                </div>`
-                }
-                $('.contents').append(html)
-           }
-           getdata();
-           $(window).scroll(function(){
-                var scrollTop = $(this).scrollTop();
-                var scrollHeight = $(document).height();
-                var windowHeight = $(this).height();
-                if(scrollTop + windowHeight == scrollHeight){
-                    page++;
-                   getdata();
-                }
-            }) 
+           
        })
     </script>
 </body>
