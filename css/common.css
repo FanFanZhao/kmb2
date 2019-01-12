@@ -9,6 +9,7 @@ html * {
   outline: 0;
   -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 body,
@@ -142,6 +143,15 @@ input {
   background: transparent;
   text-indent: 2em;
   color: #46D6EB;
+}
+::-webkit-input-placeholder {
+  color: #2a7a86;
+}
+:-ms-input-placeholder {
+  color: #2a7a86;
+}
+::-ms-input-placeholder {
+  color: #2a7a86;
 }
 ::placeholder {
   color: #2a7a86;
@@ -298,25 +308,41 @@ input {
   padding-bottom: 0.13333333rem;
 }
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .flex2 {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
 }
 .fldir {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .around {
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 .alcenter {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .jscenter {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .bold {
@@ -326,7 +352,7 @@ input {
   color: #B7B5B4;
 }
 .mainbg {
-  background-color: #46D6EB;
+  background-color: #8b67ff;
 }
 .red {
   color: #f20000;
@@ -356,7 +382,7 @@ input {
   color: #24c9cd;
 }
 .miancolor {
-  color: #46D6EB;
+  color: #8b67ff;
 }
 .bgcolor2 {
   background-color: #00A2DD;
@@ -428,6 +454,8 @@ input {
   position: fixed;
 }
 .flex1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 .blue {
@@ -443,6 +471,7 @@ input {
   background-color: #00AA3B;
 }
 .bglinear {
+  background: -webkit-gradient(linear, left top, left bottom, from(#67C1FF), to(#6596FF));
   background: linear-gradient(#67C1FF, #6596FF);
 }
 .whitebg {
@@ -503,6 +532,7 @@ input:-webkit-autofill {
   width: 1.2rem;
   height: 1.2rem;
   background: url(../images/right_arrow.png) no-repeat center / 46% 46%;
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .kefu {
@@ -527,12 +557,14 @@ input:-webkit-autofill {
   width: 100%;
   /* border-bottom: 1/@baserm solid #37bac9; */
   background: url(../images/header_bg.png) no-repeat center / 100% 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 1.2rem;
   left: 0;
   top: 0;
   z-index: 9;
-  color: #46D6EB;
+  color: #8b67ff;
 }
 .btn {
   width: 100%;
@@ -576,29 +608,57 @@ input:-webkit-autofill {
 .outer {
   width: 60%;
   margin-left: -30%;
+  -webkit-transform-origin: center center;
   transform-origin: center center;
+  -webkit-animation: spin 20s linear infinite;
   animation: spin 20s linear infinite;
 }
 .inner {
   width: 50%;
   margin-top: 5%;
   margin-left: -25%;
+  -webkit-transform-origin: center center;
   transform-origin: center center;
+  -webkit-animation: spin_reverse 20s linear infinite;
   animation: spin_reverse 20s linear infinite;
 }
-@keyframes spin {
+@-webkit-keyframes spin {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin_reverse {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 @keyframes spin_reverse {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
+    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
 }
