@@ -22,7 +22,7 @@
 <body>
     <div class="mi-header fixed flex tc">
         <a href="javascript:history.go(-1);" class="back2"></a>
-        <h1 class=" gold mauto ft18">激活码转账</h1>
+        <h1 class=" gold mauto ft18">转账</h1>
         <!-- <a href="javascript:;" class="kefu"></a> -->
     </div>
     <div class="mt45 mb55 plr20 miancolor ptb20 ">
@@ -33,7 +33,7 @@
             <div class="tangle_bottom_right abstrot tangle"></div>
             <div class="miancolor ptb10">
                 <div class="mb10 flex alcenter ptb10 bdb">
-                    <span class="pr10">可用激活码数量：</span>
+                    <span class="pr10">可用数量：</span>
                     <span class="count">0</span>
                 </div>
                 <div class="mb10 flex alcenter ptb10 bdb">
@@ -42,7 +42,7 @@
                 </div>
                 <div class="mb10 flex alcenter ptb10 bdb">
                     <span class="pr10">转赠数量：</span>
-                    <input type="number" placeholder="请输入转赠激活码数量" class="num flex1 number" name="number" id="number" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')">
+                    <input type="number" placeholder="请输入转赠数量" class="num flex1 number" name="number" id="number" onkeyup="value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'')">
                 </div>
                 <div class="mt20 btn">确定</div>
             </div>
@@ -56,35 +56,9 @@
         <a href="mine.html" class="active "><div class="four"></div><span>账户</span></a>
     </div>
     <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <script src="javascripts/main.js"></script>
     <script>
       $(function(){
-            initData({url:'/user/active_number'},function(message){
-                $('.count').html(message)
-            })
-            $('.btn').click(function(){
-                var account_number=$('.account_number').val();
-                var number=$('.number').val();
-                if(!account_number){
-                    return layer_msg('请输入会员账号')
-                }
-                if(!number){
-                    return layer_msg('请输入数量')
-                }
-                initData({url:'/user/active_transfer',data:{account_number:account_number,number:number},type:'post'},function(message){
-                    
-                    layer.open({
-                        content: '激活码转账成功',
-                        btn: '我知道了',
-                        shadeClose: false,
-                        yes: function(){
-                            window.location.href ="account_details.html";
-                        }
-                    });
-                })
-            })
-            
+           
       })
     </script>
 </body>
