@@ -232,27 +232,12 @@
         </div>
     </div>
     <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <script src="javascripts/clipboard.min.js"></script>
-    <script src="javascripts/main.js"></script>
     <script>
         $(function(){
             $('.tab>div').click(function () {
                 $(this).addClass('active').siblings().removeClass('active')
             })
-            var content = $("#get_address").html();
-            var clipboard = new ClipboardJS('.copy', {
-                text: function() {
-                    return content;
-                }
-            });
-            clipboard.on('success', function(e) {
-                layer_msg('复制成功');
-            });
-
-            clipboard.on('error', function(e) {
-                layer_msg('复制失败');
-            });
+          
         })
        
     </script>
