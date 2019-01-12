@@ -36,7 +36,8 @@
 <body>
     <div class="mi-header fixed flex tc">
         <a href="javascript:history.go(-1);" class="back2"></a>
-        <h1 class=" gold mauto ft18">BHC转账</h1>
+        <h1 class=" gold mauto ft18">BHC提币</h1>
+        <a href="transfer2.html" class="kefu2">互转</a>
     </div>
     <div class="mt45 mb55 plr20 miancolor ptb20 ">
         <div class="posRelt ptb20 plr20 bl_box pwd_setbox ">
@@ -69,6 +70,31 @@
         <a href="share.html"><div class="three"></div><span>分享</span></a>
         <a href="mine.html" class="active "><div class="four"></div><span>账户</span></a>
     </div>
- 
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+        $(function(){
+           
+            $(".login_btn").click(function () {
+                var address = $("#addr").val();
+                var pay_password = $("#pay_password").val();
+                var number = parseFloat($("#number").val())
+                if (address == ""){
+                    layer_msg("请输入地址")
+                    return false
+                }
+                if (number == ""){
+                    layer_msg("请输入数量")
+                    return false
+                }
+                if (pay_password == ""){
+                    layer_msg("请输入支付密码")
+                    return false
+                }
+                
+            })
+        })
+    </script>
 </body>
 </html>
