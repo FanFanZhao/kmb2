@@ -19,28 +19,28 @@
               justify-content: space-between;
   }
   .common_footer .one{
-    background: url(../images/one.png) no-repeat center /100% 100%;
+    background: url(../images/one.png) no-repeat center /0.48rem;
   }
   .common_footer .two{
-    background: url(../images/two.png) no-repeat center /100% 100%;
+    background: url(../images/two.png) no-repeat center /0.48rem;
   }
   .common_footer .three{
-    background: url(../images/three.png) no-repeat center /100% 100%;
+    background: url(../images/three.png) no-repeat center /0.48rem;
   }
   .common_footer .four{
-    background: url(../images/four.png) no-repeat center /100% 100%;
+    background: url(../images/four.png) no-repeat center /0.48rem;
   }
   .common_footer .active .one{
-    background: url(../images/one_active.png) no-repeat center /100% 100%;
+    background: url(../images/one_active.png) no-repeat center /0.48rem;
   }
   .common_footer .active .two{
-    background: url(../images/two_active.png) no-repeat center /100% 100%;
+    background: url(../images/two_active.png) no-repeat center /0.48rem;
   }
   .common_footer .active .three{
-    background: url(../images/three_active.png) no-repeat center /100% 100%;
+    background: url(../images/three_active.png) no-repeat center /0.48rem;
   }
   .common_footer .active .four{
-    background: url(../images/four_active.png) no-repeat center /100% 100%;
+    background: url(../images/four_active.png) no-repeat center /0.48rem;
   }
   .common_footer a {
     -webkit-box-flex: 1;

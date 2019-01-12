@@ -376,7 +376,7 @@ input {
   background: #101929;
 }
 .bgrgba {
-  background-color: rgba(40, 57, 65, 0.5);
+  background-color: rgba(139, 103, 255, 0.1);
 }
 .colore3 {
   color: #24c9cd;
@@ -391,7 +391,7 @@ input {
   color: #00a2dd;
 }
 .co_rb1 {
-  color: #83e6f5;
+  color: #8b67ff;
 }
 .co_rb2 {
   color: #ceae1e;
@@ -415,7 +415,7 @@ input {
   background: #00A2DD;
 }
 .bgrgb1 {
-  background-color: #83e6f5;
+  background-color: #8b67ff;
 }
 .bgrgb2 {
   background-color: #ceae1e;
@@ -427,7 +427,7 @@ input {
   background: rgba(0, 162, 221, 0.2);
 }
 .bgrgba1 {
-  background-color: rgba(131, 230, 245, 0.2);
+  background-color: rgba(139, 103, 255, 0.2);
 }
 .bgrgba2 {
   background-color: rgba(206, 174, 30, 0.2);
@@ -531,7 +531,7 @@ input:-webkit-autofill {
   left: 0rem;
   width: 1.2rem;
   height: 1.2rem;
-  background: url(../images/right_arrow.png) no-repeat center / 46% 46%;
+  background: url(../images/right_arrow.png) no-repeat center / 0.3rem;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
