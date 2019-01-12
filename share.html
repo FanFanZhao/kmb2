@@ -21,9 +21,7 @@
 </head>
 <body>
     <div class="mi-header fixed flex tc">
-        <!-- <a href="javascript:;" class="back" onclick="BSL.Qcode('0','code')"></a> -->
         <h1 class=" gold mauto ft18">分享</h1>
-        <a href="javascript:;" class="kefu"></a>
     </div>
     <div class="mb55 plr20 miancolor" style='margin-top: 4.2rem'>
         <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
@@ -52,50 +50,8 @@
         <a href="share.html" class="active" ><div class="three"></div><span>分享</span></a>
         <a href="mine.html"><div class="four"></div><span>账户</span></a>
     </div>
-    <div class="layer_box_kefu">
-        <div class="con_box ">
-            <div class="tc ft14 posRelt mb20 miancolor">联系客服 <img src="images/close.png" alt="" class="close"></div>
-                <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
-                    <div class="tangle_left abstrot tangle"></div>
-                    <div class="tangle_right abstrot tangle"></div>
-                    <div class="tangle_bottom_left abstrot tangle"></div>
-                    <div class="tangle_bottom_right abstrot tangle"></div>
-                    <div class=" ptb10">
-                        <div>
-                            <div class="kefuinfo flex alcenter plr10 mr10">
-                                <img src="images/wx.png" alt="" class="wximg">
-                                <span class="copy_text" id="get_address">BHCchain</span>
-                            </div>
-                            <a href="javascript:;" class="copy miancolor ft14"  data-clipboard-action="copy" data-clipboard-target="#get_address">复制</a>
-                        </div>
-                        <img src="images/kefu.jpg" alt="" class="kefucode" id="kefucode">
-                        <p class="tc pt10">
-                            <a href="javascript:;" class="savecode miancolor">点击保存二维码</a>
-                        </p>
-                    </div>
-                </div>
-        </div>
-    </div>
+   
     <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <script src="javascripts/clipboard.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <script>
-       $(function(){
-        var content = $("#get_address").html();
-            var clipboard = new ClipboardJS('.copy', {
-                text: function() {
-                    return content;
-                }
-            });
-            clipboard.on('success', function(e) {
-                layer_msg('复制成功');
-            });
-
-            clipboard.on('error', function(e) {
-                layer_msg('复制失败');
-            });
-       })
-    </script>
+   
 </body>
 </html>
