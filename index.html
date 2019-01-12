@@ -178,6 +178,7 @@
             margin: 10px auto;
             width: 1.6rem;
         }
+       
     </style>
 </head>
 <body>
@@ -213,18 +214,45 @@
                 <div class="stop  tc posRelt take_partin">立即参与</div>
                 <img src="images/trank22.png" alt="" class="abstrot block" style="bottom: -.6rem;right:5%;width: 90%;">
             </div>
-            
-            <div class="nodata">
-                <img src="images/nodata.png" alt="" >
-                <p class="tc miancolor">暂无矿机</p>
+            <div>
+                <div class="posRelt ptb10 plr20 bl_box mt20">
+                    <div class="tangle_left abstrot tangle"></div>
+                    <div class="tangle_right abstrot tangle"></div>
+                    <div class="tangle_bottom_left abstrot tangle"></div>
+                    <div class="tangle_bottom_right abstrot tangle"></div>
+                    <div class="miancolor flex alcenter between">
+                        <div>
+                            <p class="mb10">给 13360253163 激活账户</p>
+                            <p class="ft10 color85">2019-01-04 15:24:51</p>
+                        </div>
+                        <div class="cheng">-1.00000000</div>
+                    </div>
+                </div>
+                <div class="nodata">
+                    <img src="images/nodata.png" alt="" >
+                    <p class="tc miancolor">暂无记录</p>
+                </div>
             </div>
-
-        </div>
-        <div class="layer_box">
-            <div class="uplist plr10 ptb10">
-                <ul class="uplists"></ul>
+           
+            <div class="layer_box">
+                <div class="uplist plr20 ptb20">
+                    <div class="bdb pb20">
+                        <p>赠送糖果余额：<span>123</span></p>
+                        <div class="mt15">
+                            <button class="bglinear white updateok" >一键生息</button>
+                            <button class="bglinear white updateok" >参与CFC</button>
+                        </div>
+                    </div>
+                    <div class="mt20">
+                        <p>赠送糖果余额：<span>123</span></p>
+                        <div class="mt15">
+                                <button class="bglinear white updateok" >参与CFC</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        
     </div>
     <div class="common_footer">
         <a href="index.html" class="active ">
@@ -245,7 +273,7 @@
     <script src="javascripts/jquery.min.js"></script>
     <script>
         $('.take_partin').click(function(){
-            
+            $('.layer_box').show();
         })
     </script>
 </body>
