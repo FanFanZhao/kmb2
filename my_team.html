@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>我的推荐</title>
+    <style>
+       
+       .item img{
+          width: 50%;
+       }
+      
+    </style>
+</head>
+<body>
+    <div class="mi-header fixed flex tc">
+        <a href="javascript:history.go(-1);" class="back2"></a>
+        <h1 class=" gold mauto ft18">我的推荐</h1>
+        <!-- <a href="javascript:;" class="kefu"></a> -->
+    </div>
+    <div class="mt45 mb55 plr20 miancolor">
+        <div class="posRelt ptb10  content">
+           
+        </div>
+    </div>
+    <div class="common_footer">
+        <a href="index.html" ><div class="one"></div><span>挖矿</span></a>
+        <a href="lists.html"><div class="two"></div><span>机市</span></a>
+        <a href="share.html"><div class="three"></div><span>分享</span></a>
+        <a href="mine.html" class="active" ><div class="four"></div><span>账户</span></a>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+        $(function(){
+            $('.team>div').click(function(){
+                $(this).addClass('myactive').siblings().removeClass('myactive')
+                var classname=$(this).data('type');
+                $('.'+classname).addClass('active').siblings().removeClass('active')
+            })
+            getData();
+            layer_loading();
+            function getData(){
+                $.ajax({
+                    url:laravel_api +'/user/son_list',
+                    type:'POST',
+                    data:{},
+                    dataType:'json',
+                    success:function(res){
+                        layer_close();
+                        renderList(res.message)
+                    }
+                })
+            }
+            function renderList(data){
+                console.log(data)
+                var html1='';
+                for(var i in data){
+                    html1+=` <div class="flex alcenter ptb10 mb10 posRelt bgrgba">
+                        <div class="flex alcenter item flex1 tc mr10"><img src="${data[i].head_portrait}" alt="" class="portrait mauto"></div>
+                        <div class="item flex2">
+                            <div class='mb10'>账号：${data[i].account_number} </div>
+                            <div>${data[i].time}</div>
+                        </div>
+                    </div>`
+                }
+                //console.log(html1)
+                $('.content').html(html1)
+            }
+        })
+    </script>
+</body>
+</html>

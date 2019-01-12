@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>Document</title>
+    <style>
+        .arrow {
+            width: 0.48rem;
+            margin-left: 0.1rem;
+        }
+
+        .mauto {
+            display: flex;
+            align-items: center;
+        }
+        .wrap{
+            padding: 2rem 0.5rem 0 0.5rem;
+        }
+
+        .out_cir {
+            /* width: 3rem;
+            height: 3rem; */
+            /* border-radius: 50%;
+            border:0.8rem solid #46D6EB; */
+        }
+
+        .in_cir {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: none;
+        }
+        .right_msg{
+            width: 60%;
+            padding: 0.2rem 0;
+        }
+        .spot{
+            width: 0.3rem;
+            height: 0.3rem;
+            border-radius: 50%;
+        }
+        .list{
+            margin-bottom: 0.2rem;
+        }
+        .list span{
+            display: inline-block;
+        }
+        .spot_wrap{
+            width: 10%
+        }
+        .even_name{
+            width: 20%;
+        }
+        .num{
+            width: 30%;
+        }
+        .percent{
+            width: 40%;
+        }
+        .coin{
+            height: 3rem;
+            width: 100%;
+            padding-left: 0.3rem;
+        }
+        .coin .contbox{
+            height: 100%;
+        }
+       
+        .coin_num{
+            color: #fff;
+            /* font-size: 0.7rem; */
+        }
+        .excharge_withdraw>a{
+            width: 48%;
+            text-align: center;
+            line-height: 1rem;
+            border-left: 0.05rem solid #46D6EB;
+            border-right: 0.05rem solid #46D6EB;
+            background: rgba(70, 214, 235, 0.18);
+            display: block;
+        }
+        .out_bg{
+            background: url('images/big.png') center no-repeat;
+            background-size: 100%;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .in_bg{
+            background: url('images/circle.png') center no-repeat;
+            background-size: 100%;
+            justify-content: center;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        .in_bg img{
+            width: .7rem;
+        }
+        .mycontainer{
+            margin-top: 1rem;
+        }
+        .swiper-slide{
+            width: 100%;
+            /* padding-right: 20px; */
+        }
+        .line{
+            width: .08rem;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <div class="mi-header fixed flex tc">
+        <!-- <a href="javascript:;" class="back" onclick="BSL.Qcode('0','code')"></a> -->
+        <h1 class=" gold mauto ft18 "><span class="account"></span> <img class="arrow" src="images/right_arrow.png" /></h1>
+        <a href="javascript:;" class="kefu"></a>
+    </div>
+    <div class="wrap mb55">
+        <div class="cir_msg flex between">
+            
+            <div class="out_cir flex alcenter jscenter mr10">
+                <div id="chart1" style="width: 3rem;height: 3rem;"></div>
+            </div>
+            <div class="right_msg flex fldir">
+                <ul>
+                    <li class="flex list co_rba0 alcenter">
+                        <span class="spot bgrgb0 mr5"></span>
+                        <span class="even_name ">挖矿</span>
+                        <span class="num totalnum">0</span>
+                        <span class="percent tr totalper">0.10%</span>
+                    </li>
+                    <li class="flex list co_rb1 alcenter">
+                        <span class="spot bgrgb1 mr5"></span>
+                        <span class="even_name ">推广</span>
+                        <span class="num tgnum">0</span>
+                        <span class="percent tr tgper">0.30%</span>
+                    </li>
+                    <!-- <li class="flex list co_rb2">
+                        <span class="spot_wrap"><span class="spot bgrgb2"></span></span>
+                        <span class="even_name">BTC</span>
+                        <span class="num">0</span>
+                        <span class="percent tr">0.00%</span>
+                    </li>
+                    <li class="flex list co_rb3">
+                        <span class="spot_wrap"><span class="spot bgrgb3"></span></span>
+                        <span class="even_name">ETH</span>
+                        <span class="num">0</span>
+                        <span class="percent tr">0.00%</span>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <section class="swiper-container mycontainer">
+            <section class="swiper-wrapper">
+                <section class="swiper-slide">
+                    <section class="levelbox">
+                        <div class="coin co_rb1 bgrgba1 posRelt">
+                            <div class="line bgrgb1 abstrot"></div>
+                           <div class="flex fldir  contbox">
+                                <p class="coin_name ft14">KMB</p>
+                                <p class="coin_num ft14 white mt5 mtb10 kmbnum">0</p>
+                                <P class="flex alcenter mb10">可用 <span class="kmbnum pl5"></span></P>
+                                <!-- <p class="flex alcenter">锁仓 <span class="pl5">0</span></p> -->
+                           </div>
+                        </div>
+                    </section>
+                </section>
+                <!-- <section class="swiper-slide">
+                    <section class="levelbox">
+                        <div class="coin co_rb2 bgrgba2 posRelt">
+                            <div class="line bgrgb2 abstrot"></div>
+                            <p class="coin_name ft14">BTC</p>
+                            <p class="coin_num ft20">0</p>
+                        </div>
+                    </section>
+                </section>
+                <section class="swiper-slide">
+                    <section class="levelbox">
+                        <div class="coin co_rb3 bgrgba3 posRelt">
+                            <div class="line bgrgb3 abstrot"></div>
+                            <p class="coin_name ft14">ETH</p>
+                            <p class="coin_num ft20">0</p>
+                        </div>
+                    </section>
+                </section> -->
+            </section> 
+        </section>
+    
+        
+        <!--转账-->
+        <!-- <div class="excharge_withdraw flex between mt30">
+           <div class="excharge ft18 miancolor">充</div>
+           <div class="withdraw ft18 miancolor">提</div>
+        </div> -->
+        <div class="excharge_withdraw flex between mt20">
+            <a href="member_active.html" class="excharge ft10 miancolor">激活会员</a>
+            <a href="member_transfer.html" class="withdraw ft10 miancolor">激活码转账</a>
+        </div>
+        <div class="flex alcenter between mt20">
+            <a href="transfer.html" class="flex alcenter fldir flex1">
+                <div class="out_bg flex alcenter jscenter">
+                <div class="in_bg flex alcenter jscenter">
+                    <img src="images/zz.png" />
+                </div>
+                </div>
+                <span class="mt10 miancolor">KMB转账</span>
+            </a>
+            <a href="balance.html" class="flex alcenter fldir flex1">
+                <div class="out_bg flex alcenter jscenter">
+                    <div class="in_bg flex alcenter jscenter">
+                        <img src="images/mx.png" />
+                    </div>
+                </div>
+                <span class="mt10 miancolor">收益明细</span>
+            </a>
+            <a href="account_details.html" class="flex alcenter fldir flex1">
+                <div class="out_bg flex alcenter jscenter">
+                    <div class="in_bg flex alcenter jscenter">
+                        <img src="images/zd.png" />
+                    </div>
+                </div>
+                <span class="mt10 miancolor">账单详情</span>
+            </a>
+            <a href="my_team.html" class="flex alcenter fldir flex1">
+                <div class="out_bg flex alcenter jscenter">
+                    <div class="in_bg flex alcenter jscenter">
+                        <img src="images/tj.png" />
+                    </div>
+                </div>
+                <span class="mt10 miancolor">我的推荐</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="common_footer">
+        <a href="index.html" class=" ">
+            <div class="one"></div><span>挖矿</span>
+        </a>
+        <a href="lists.html" class=''>
+            <div class="two"></div><span>机市</span>
+        </a>
+        <a href="share.html" >
+            <div class="three"></div><span>分享</span>
+        </a>
+        <a href="mine.html" class="active">
+            <div class="four"></div><span>账户</span>
+        </a>
+    </div>
+    <div class="layer_box_kefu">
+        <div class="con_box ">
+            <div class="tc ft14 posRelt mb20 miancolor">联系客服 <img src="images/close.png" alt="" class="close"></div>
+                <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
+                    <div class="tangle_left abstrot tangle"></div>
+                    <div class="tangle_right abstrot tangle"></div>
+                    <div class="tangle_bottom_left abstrot tangle"></div>
+                    <div class="tangle_bottom_right abstrot tangle"></div>
+                    <div class=" ptb10">
+                        <div>
+                            <div class="kefuinfo flex alcenter plr10 mr10">
+                                <img src="images/wx.png" alt="" class="wximg">
+                                <span class="copy_text" id="get_address">kmbchain</span>
+                            </div>
+                            <a href="javascript:;" class="copy miancolor ft14"  data-clipboard-action="copy" data-clipboard-target="#get_address">复制</a>
+                        </div>
+                        <img src="images/kefu.jpg" alt="" class="kefucode" id="kefucode">
+                        <p class="tc pt10">
+                            <a href="javascript:;" class="savecode miancolor">点击保存二维码</a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/clipboard.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="lib/swiper.min.js"></script>
+    <script src="javascripts/echarts.min.js"></script>
+    <script>
+        $(function(){
+            
+            var data;
+
+            var swiper = new Swiper('.mycontainer', {
+                slidesPerView: 'auto',
+                on:{
+                transitionEnd: function(){
+                    console.log(swiper)
+                    current = swiper.progress>0?1:0;
+                    i = current;
+                    // console.log(swiper,current)
+                    $('.level_con').eq(current).show().siblings('.level_con').hide();
+                    $('.top-tab span').eq(current).addClass('active').siblings().removeClass()
+                },
+                },
+            });
+            $('.account').click(function(){
+                location.href='account_set.html';
+            })
+            initData({url:'/ltcReturnDetail'},function(res){
+                console.log(res);
+                var all=res.total_ltc-0;
+                var total=res.total_return-0;
+                var balance=res.balance;
+                var sum=all+total;
+                $('.totalnum').html(all);
+                $('.totalper').html((all/sum*100 || 0).toFixed(2)+'%')
+                $('.tgnum').html(total);
+                $('.tgper').html((total/sum*100||0).toFixed(2)+'%')
+                $('.kmbnum').html(balance);
+                // data=genData(['total','KMB','BTC','ETH'],[,,0,0]);
+                initEchart([{value:all,name:'all'},{value:total,name:'total'}]);
+            })
+            initData({url:'/user/getuserbyaddress',type:'post'},function(message){
+                $(".account").html(message.account_number);
+            })
+            function genData(names,numbers){
+                var legendData = names;
+                var seriesData = [];
+                var selected = {};
+                for(var i in names){
+                    console.log(i,names[i])
+                    // seriesData[i]['name']=names[i];
+                    seriesData.push({name:names[i]})
+                    selected[names[i]]=true;
+                }
+                for(var i in numbers){
+                    seriesData[i].value=numbers[i];
+                }
+              console.log(legendData,seriesData,selected)
+                return {
+                    legendData: legendData,
+                    seriesData: seriesData,
+                    selected: selected
+                };
+            }
+            // 饼状图
+
+            function initEchart(mydata){
+                console.log(mydata)
+                var colors=['#00A2DD','#83e6f5'];
+                var i=0;
+                option = {
+                    tooltip : {
+                        trigger: 'item',
+                        show:false,
+                        formatter: "{b} : {c} ({d}%)",
+                       
+                    },
+                    series : [
+                    {
+                        name:'种类',
+                        type:'pie',
+                        radius : '75%',
+                        center: ['50%', '50%'],
+                        data:mydata,
+                        // roseType: 'radius',
+                        label: {
+                            normal: {
+                                show:false,
+                                textStyle: {
+                                    color: 'rgba(255, 255, 255, 0.3)'
+                                }
+                            }
+                        },
+                        
+                        itemStyle: {
+                            normal: {
+                                color: function(){  
+                                     return colors[i++];   
+                                },
+                                shadowBlur: 200,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        },
+
+                        animationType: 'scale',
+                        animationEasing: 'elasticOut',
+                        animationDelay: function (idx) {
+                            return Math.random() * 200;
+                        }
+                    }
+                ]
+                };
+                var myChart1 = echarts.init(document.getElementById('chart1'));
+                myChart1.setOption(option);
+            }
+
+        var content = $("#get_address").html();
+            var clipboard = new ClipboardJS('.copy', {
+                text: function() {
+                    return content;
+                }
+            });
+            clipboard.on('success', function(e) {
+                layer_msg('复制成功');
+            });
+
+            clipboard.on('error', function(e) {
+                layer_msg('复制失败');
+            });  
+    })
+    </script>
+</body>
+
+</html>

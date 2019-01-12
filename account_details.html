@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>Document</title>
+    <style>
+       
+       .balance{
+           padding: 1rem 0;
+       }
+      
+    </style>
+</head>
+<body>
+    <div class="mi-header fixed flex tc">
+        <a href="javascript:history.go(-1);" class="back2"></a>
+        <h1 class=" gold mauto ft18">账单详情</h1>
+        <!-- <a href="javascript:;" class="kefu"></a> -->
+    </div>
+    <div class="mt45 mb55 plr20">
+        <div class="data_ul" data-page="1">
+        </div>
+    </div>
+    <div class="common_footer">
+        <a href="index.html"  ><div class="one"></div><span>挖矿</span></a>
+        <a href="lists.html"><div class="two"></div><span>机市</span></a>
+        <a href="share.html"><div class="three"></div><span>分享</span></a>
+        <a href="mine.html" class="active "><div class="four"></div><span>账户</span></a>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+       $(function(){
+           var page=1;
+           function getdata(){
+                initData({url:'/account/list',data:{page:page}, type:'post'},function(message){
+                    console.log(message)
+                    if(message.data&&message.data.length > 0){
+                        render_list(message)
+                    }else{
+                        layer_msg('没有更多数据了...')
+                    }
+                })
+           }
+           getdata();
+            function render_list(list){
+                var item = list.data;
+                if(item && item.length>0){
+                    var html = "";
+                    for(i in item){
+                        var info=item[i].info;
+                        html+=` <div class="posRelt ptb10 plr20 bl_box">
+                                    <div class="tangle_left abstrot tangle"></div>
+                                    <div class="tangle_right abstrot tangle"></div>
+                                    <div class="tangle_bottom_left abstrot tangle"></div>
+                                    <div class="tangle_bottom_right abstrot tangle"></div>
+                                    <div class="miancolor flex alcenter between">
+                                        <div>
+                                            <p class="mb10">${info}</p>
+                                            <p class="ft10 color85">2018-11-03 10:00:32</p>
+                                        </div>
+                                        <div class='cheng'>${item[i].value}</div>
+                                    </div>
+                                </div>`
+                    }
+                    $(".data_ul").append(html);
+                }
+            }
+            $(window).scroll(function(){
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(document).height();
+                var windowHeight = $(this).height();
+                var params = get_all_params() || {};
+                if(scrollTop + windowHeight == scrollHeight){
+                    page++;
+                   getdata();
+                }
+            }) 
+
+       })
+    </script>
+</body>
+</html>

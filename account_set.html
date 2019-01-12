@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>Document</title>
+    <style>
+       .arrow{
+           width: .3rem;
+           margin-left: .1rem;
+       }
+       .resetpas span{
+           width: 26%;
+       }
+    </style>
+</head>
+<body>
+    <div class="mi-header fixed flex tc">
+        <a href="javascript:history.go(-1);" class="back2"></a>
+        <h1 class="gold mauto ft18">帐号设置</h1>
+        <!-- <a href="javascript:;" class="kefu"></a> -->
+    </div>
+    <div class="mt45 mb55 plr20 miancolor ">
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>UID</span>
+            <span class="id"></span>
+        </div>
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>手机号</span>
+            <span class="user_name"></span>
+        </div>
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>KMB总量</span>
+            <span class="about_money"></span>
+        </div>
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>激活码数量</span>
+            <span class="count"></span>
+        </div>
+        
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between pwdbtn">
+            <span>设置登录密码</span>
+            <span class="flex alcenter">设置<img src="images/right_arrow.png" alt="" class="arrow"></span>
+        </div>
+        <div class="posRelt ptb10 plr20 bl_box pwd_setbox hide pwdbox">
+            <div class="tangle_left abstrot tangle"></div>
+            <div class="tangle_right abstrot tangle"></div>
+            <div class="tangle_bottom_left abstrot tangle"></div>
+            <div class="tangle_bottom_right abstrot tangle"></div>
+            <div class="miancolor ptb10 resetpas">
+                <p class="mb10">用户手机号 <span class="mobile">18703838439</span></p>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <!-- <span class="pr10">验证码</span> -->
+                    <input type="text" placeholder="请输入验证码" class="new_pwd verify_code flex1" style="text-indent: 0" >
+                    <a href="javascript:;" class="white getcode" data-type="reset_password">获取验证码</a>
+                </div>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <span class="pr10">新密码</span>
+                    <input type="password" placeholder="6~30个字符" class="new_pwd1 flex1">
+                </div>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <span class="pr10">确认密码</span>
+                    <input type="password" placeholder="6~30个字符" class="new_pwd2 flex1">
+                </div>
+                <div class="mt20 btn" data-msg="/user/password">确定</div>
+            </div>
+        </div>
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between paybtn">
+            <span>设置支付密码</span>
+            <span class="flex alcenter">设置<img src="images/right_arrow.png" alt="" class="arrow"></span>
+        </div>
+        <div class="posRelt ptb10 plr20 bl_box pay_setbox hide pwdbox">
+            <div class="tangle_left abstrot tangle"></div>
+            <div class="tangle_right abstrot tangle"></div>
+            <div class="tangle_bottom_left abstrot tangle"></div>
+            <div class="tangle_bottom_right abstrot tangle"></div>
+            <div class="miancolor ptb10 resetpas">
+                <p class="mb10">用户手机号 <span class="mobile">18703838439</span></p>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <!-- <span class="pr10">验证码</span> -->
+                    <input type="text" placeholder="请输入验证码" class="new_pwd verify_code flex1" style="text-indent: 0">
+                    <a href="javascript:;" class="white getcode" data-type="reset_pay_password">获取验证码</a>
+                </div>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <span class="pr10">支付密码</span>
+                    <input type="password" placeholder="6~30个字符" class="new_pwd1 flex1">
+                </div>
+                <div class="mb10 flex alcenter ptb10 bdb">
+                    <span class="pr10">确认密码</span>
+                    <input type="password" placeholder="6~30个字符" class="new_pwd2 flex1">
+                </div>
+                <div class="mt20 btn" data-msg="/user/pay_password">确定</div>
+            </div>
+        </div>
+        <!-- <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>邮箱</span>
+            <span class="flex alcenter">绑定<img src="images/right_arrow.png" alt=""  class="arrow"></span>
+        </div> -->
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>账号平台</span>
+            <span>爱币</span>
+        </div>
+        <div class="bgrgba tc mb10 plr10 ptb20 flex alcenter between">
+            <span>软件更新</span>
+            <span class="flex alcenter">1.1500 <img src="images/right_arrow.png" alt=""  class="arrow"></span>
+        </div>
+        <div class="mt20 btn login_btn">退出登录</div>
+    </div>
+    <div class="common_footer">
+        <a href="index.html"  ><div class="one"></div><span>挖矿</span></a>
+        <a href="lists.html"><div class="two"></div><span>机市</span></a>
+        <a href="share.html"><div class="three"></div><span>分享</span></a>
+        <a href="mine.html" class="active"><div class="four"></div><span>账户</span></a>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+      $(function(){
+          var codet_type;
+        initData({url:'/user/getuserbyaddress',type:'post'},function(message){
+            console.log(message)
+            $(".about_money").html(message.balance);
+            $('.id').html(message.id);
+            $(".user_name").html(message.account_number);
+            $(".mobile").html(message.account_number);
+        })
+        initData({url:'/user/active_number'},function(message){
+            $('.count').html(message)
+        })
+        $('.login_btn').click(function(){
+            initData({url:'/logout'},function(message){
+                location.href='login.html'
+            })
+            
+        })
+        $('.pwdbtn').click(function(){
+            $('.pwd_setbox').toggleClass('hide');
+            $('.pay_setbox').addClass('hide');
+
+        });
+        $('.paybtn').click(function(){
+            $('.pay_setbox').toggleClass('hide');
+            $('.pwd_setbox').addClass('hide');
+        });
+        $('.getcode').click(function () {
+            var codet_type=$(this).data('type');
+            if ($(this).text() != '获取验证码') {
+                return false;
+            }
+            console.log('abc')
+            // return false;
+            var self = $(this);
+            self.text('59秒');
+            var interval = setInterval(function () {
+                var text=parseInt(self.text());
+                if ( text== 0) {
+                    clearInterval(interval);
+                    self.text('获取验证码');
+                } else {
+                    self.text(text - 1+'秒');
+                }
+            }, 1000)
+            // return false;
+            $.get(laravel_api + '/send_auth_code', {
+                mobile: $(".mobile").html(),
+                type: codet_type
+            }, function (res) {
+                if (res.type != 'ok') {
+                    layer_msg(res.message);
+                    clearInterval(interval);
+                    self.text('获取验证码');
+                    return false;
+                }else{
+                    layer_msg(res.message)
+                }
+            })
+            return false;
+        })
+        $('.btn').click(function(){
+            var url=$(this).data('msg');
+            console.log(url,123)
+            var $parent=$(this).parent('.resetpas');
+            var code=$parent.find('.verify_code').val();
+            var newpwd1=$parent.find('.new_pwd1').val();
+            var newpwd2=$parent.find('.new_pwd2').val();
+            if(!code){
+                return layer_msg('请输入验证码')
+            }
+            if(!newpwd1){
+                return layer_msg('请输入密码')
+            }
+            if(!newpwd2){
+                return layer_msg('确认密码不能为空')
+            }
+            if(newpwd1!=newpwd2){
+                return layer_msg('密码输入不一致，请重新输入！')
+                
+            }
+           
+            initData({url:url,type:'post',data:{password:newpwd1, re_password:newpwd2, auth_code:code}},function(message){
+                layer_msg(message);
+                $('.pwdbox').addClass('hide');
+               
+            })
+        })
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>挖矿明细</title>
+    <style>
+        /* .asset{
+            margin-top: 6rem;
+        } */
+        
+        .tab{
+            height: 1.3rem;
+            background: url(images/trank2.png) no-repeat center / 100% 100%;
+        }
+        .tab>div{
+            width: 30%;
+            height: .7rem;
+            line-height: .7rem;
+            top: 0;
+        }
+        .tab>div.ing{
+            left: 16%;
+        }
+        .tab .stop{
+            right: 11%;
+        }
+        .tab .active{
+            background: url(images/trank3.png) no-repeat center / 100% 100%;
+        }
+        .list_box{
+            margin:  .7rem  auto 0;
+            height: 5rem;
+            background: url(images/box.png) no-repeat center /100% 100%;
+        }
+        .type{
+            left: 20%;
+            top: .46rem;
+        }
+        .left{
+            top:57%;
+            left: 7%;
+            height: 3rem;
+            width: 3rem;
+            transform: translateY(-50%);
+            background:url(images/small.png) no-repeat center/100% 100% ;
+        }
+        .left2{
+            height: 2.7rem;
+            width: 2.7rem;
+            background:url(images/small.png) no-repeat center/100% 100% ;
+        }
+        .doing{
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .doing img{
+            width: 25%;
+        }
+        .circle2{
+            height: 4rem;
+            right: -8%;
+            width: 75%;
+            top: 10%;
+        }
+        .bottom{
+            width: 1.3rem;
+            height: .8rem;
+            bottom: .1rem;
+            transform: translateY(50%);
+            right: 0;
+            background: url(images/trank.png) no-repeat center /100% 100%;
+        }
+       .circle{
+           height: auto;
+       }
+       .total_box{
+           background: url(images/kline.png) no-repeat left bottom /65% auto;
+       }
+       .pro_box{
+          width: 100%;
+           height: .2rem;
+           border-radius: .2rem;
+           background-color: rgba(131, 230, 245, 0.5);
+       }
+       .pro{
+           left: 0;
+           top: 0;
+           height: .2rem;
+           border-radius: .2rem;
+           background-color: #46D6EB;
+           width: 20%;
+       }
+       .detail{
+           text-indent: 1em;
+           height: .6rem;
+           line-height: .6rem;
+           background: url(images/detail.png) no-repeat center center / 2.7rem auto;
+       }
+    </style>
+</head>
+<body>
+    <div class="mi-header fixed flex tc">
+        <a href="javascript:history.go(-1);" class="back2"></a>
+        <h1 class=" gold mauto ft18">挖矿明细</h1>
+    </div>
+    <div class="mt45 mb55 plr20 color85">
+        <div class="bgrgba tc  flex alcenter total_box">
+            <div class="flex2">
+                <p class="tc ft18 miancolor total_value"></p>
+                <p class="tc ft10 mt10">总挖矿数量(KMB)</p>
+            </div>
+            <div class= " flex1">
+                <div class="left2  flex fldir">
+                    <p class="tc ft10">今日收益</p>
+                    <p class="ft12 tc miancolor today">0.0</p>
+                    <p class="tc ft10">(KMB)</p>
+                </div>
+            </div>
+        </div>
+       
+        <div class="asset  flex alcenter between mt20">
+            <div class="flex1 mr10 bgrgba ptb5">
+                <p class="ft18 white tc miancolor total">0</p>
+                <p class="gray tc ft10">已领挖矿收益(KMB)</p>
+            </div>
+            <div class="flex1 bgrgba ptb5">
+                <p class="ft18 white tc miancolor hourper">0</p>
+                <p class="gray tc ft10">每小时产币(KMB)</p>
+            </div>
+        </div>
+        <div class="mt20 mb20">
+            <div class="flex alcenter">
+                <span class="ft10 pr10">剩余矿产量</span>
+                <div class="flex1 mr10">
+                    <div class="posRelt pro_box ">
+                        <div class="abstrot pro"></div>
+                    </div>
+                </div>
+                <!-- <span class="miancolor plr10">2018-12-23</span> -->
+                <span class="miancolor">剩余 <span class="balance"></span> KMB</span>
+            </div>
+        </div>
+        <div class="mt10 pb20">
+           <div class="detail mainbg tc">挖矿明细</div>
+            <div class="contents">
+                <!-- <div class="posRelt ptb10 plr20 bl_box">
+                    <div class="tangle_left abstrot tangle"></div>
+                    <div class="tangle_right abstrot tangle"></div>
+                    <div class="tangle_bottom_left abstrot tangle"></div>
+                    <div class="tangle_bottom_right abstrot tangle"></div>
+                    <div class="miancolor">
+                        <p class="mb10 tl"><span class="ft18 ">+1</span> KMB</p>
+                        <p class="mb10 tl">挖矿</p>
+                        <p class="ft10 color85 tl" >2018-11-03 10:00:32</p>
+                    </div>
+                </div> -->
+            </div>
+           
+        </div>
+    </div>
+    <div class="common_footer">
+        <a href="index.html" class="active " ><div class="one"></div><span>挖矿</span></a>
+        <a href="lists.html"><div class="two"></div><span>机市</span></a>
+        <a href="share.html"><div class="three"></div><span>分享</span></a>
+        <a href="mine.html"><div class="four"></div><span>账户</span></a>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+       $(function(){
+           var page=1;
+           var id=get_param('id');
+           function getdata(){
+                initData({url:'/oneLtcReturn',type:'get',data:{page:page,id:id}},function(data){
+                    // console.log(data.today)
+                    $('.today').html(data.totay);
+                    var total=data.ltc_detail.total_value-0;
+                    var surplus_return=data.ltc_detail.surplus_return-0;
+                    var res=(total-surplus_return)/total;
+                    $('.hourper').html(data.ltc_detail.hour_value);
+                    $('.total').html(data.total);
+                    $('.total_value').html(total)
+                    $('.balance').html(surplus_return);
+                    $('.pro').css('width',res*100+'%');
+                    if(data.detail && data.detail.length>0){
+                        renderlist(data.detail)
+                    }else{
+                        layer_msg('没有更多数据了...')
+                    }
+                })
+           }
+           function renderlist(data){
+                var html='';
+               
+                for(var i in data){
+                    console.log(id)
+                    var info=data[i].info.split('-'+id)[0];
+                    html+=`<div class="posRelt ptb10 plr20 bl_box">
+                    <div class="tangle_left abstrot tangle"></div>
+                    <div class="tangle_right abstrot tangle"></div>
+                    <div class="tangle_bottom_left abstrot tangle"></div>
+                    <div class="tangle_bottom_right abstrot tangle"></div>
+                    <div class="miancolor">
+                        <p class="mb10 tl"><span class="ft18 ">+${data[i].value}</span> </p>
+                        <p class="mb10 tl">${info}</p>
+                        <p class="ft10 color85 tl" >${data[i].created_time}</p>
+                    </div>
+                </div>`
+                }
+                $('.contents').append(html)
+           }
+           getdata();
+           $(window).scroll(function(){
+                var scrollTop = $(this).scrollTop();
+                var scrollHeight = $(document).height();
+                var windowHeight = $(this).height();
+                if(scrollTop + windowHeight == scrollHeight){
+                    page++;
+                   getdata();
+                }
+            }) 
+       })
+    </script>
+</body>
+</html>

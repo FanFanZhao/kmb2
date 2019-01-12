@@ -1,0 +1,58 @@
+
+.common_footer {
+    height: 1.4rem;
+    /* border-top: 2px solid #fafafa; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111C21;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .common_footer .one{
+    background: url(../images/one.png) no-repeat center /100% 100%;
+  }
+  .common_footer .two{
+    background: url(../images/two.png) no-repeat center /100% 100%;
+  }
+  .common_footer .three{
+    background: url(../images/three.png) no-repeat center /100% 100%;
+  }
+  .common_footer .four{
+    background: url(../images/four.png) no-repeat center /100% 100%;
+  }
+  .common_footer .active .one{
+    background: url(../images/one_active.png) no-repeat center /100% 100%;
+  }
+  .common_footer .active .two{
+    background: url(../images/two_active.png) no-repeat center /100% 100%;
+  }
+  .common_footer .active .three{
+    background: url(../images/three_active.png) no-repeat center /100% 100%;
+  }
+  .common_footer .active .four{
+    background: url(../images/four_active.png) no-repeat center /100% 100%;
+  }
+  .common_footer a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.3rem;
+    color: #999;
+  }
+  .common_footer a>div{
+    width: .66rem;height: .66rem;
+    /* margin-bottom: .1rem; */
+  }
+  .common_footer a.active {
+    color: #4CD0FF;
+  }
+  .icon-size {
+    display: inline-block;
+    font-size: .56rem!important;
+  }

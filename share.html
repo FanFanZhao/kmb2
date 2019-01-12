@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_898276_3plpyli8lse.css">
+    <script src="javascripts/flexble.js"></script>
+    <title>Document</title>
+    <style>
+      .arrow{
+          width: 10px;
+      }
+      .erweima{
+          width: 75%;
+          margin:  0 auto;
+      }
+    </style>
+</head>
+<body>
+    <div class="mi-header fixed flex tc">
+        <!-- <a href="javascript:;" class="back" onclick="BSL.Qcode('0','code')"></a> -->
+        <h1 class=" gold mauto ft18">分享</h1>
+        <a href="javascript:;" class="kefu"></a>
+    </div>
+    <div class="mb55 plr20 miancolor" style='margin-top: 4.2rem'>
+        <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
+            <div class="tangle_left abstrot tangle"></div>
+            <div class="tangle_right abstrot tangle"></div>
+            <div class="tangle_bottom_left abstrot tangle"></div>
+            <div class="tangle_bottom_right abstrot tangle"></div>
+            <div class=" ptb10 tc">
+                <!-- <p class="mb10 ft22">y2lgJm02</p> -->
+               <p class="mb10">扫描二维码下载APP</p>
+               <img src="images/erweima.png" alt="" class="erweima">
+            </div>
+        </div>
+        <!-- <div class="">
+            <p class="flex alcenter jscenter mb10">已获得 <span class="count ft18">0.000</span>KMB</p>
+            <a href="invite.html" class=" flex alcenter jscenter">共邀请<span class="person">0</span>人 <img src="images/right_arrow.png" alt="" class="arrow"></a>
+        </div> -->
+    </div>
+    <div class="common_footer">
+        <a href="index.html" ><div class="one"></div><span>挖矿</span></a>
+        <a href="lists.html"><div class="two"></div><span>机市</span></a>
+        <a href="share.html" class="active" ><div class="three"></div><span>分享</span></a>
+        <a href="mine.html"><div class="four"></div><span>账户</span></a>
+    </div>
+    <div class="layer_box_kefu">
+        <div class="con_box ">
+            <div class="tc ft14 posRelt mb20 miancolor">联系客服 <img src="images/close.png" alt="" class="close"></div>
+                <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
+                    <div class="tangle_left abstrot tangle"></div>
+                    <div class="tangle_right abstrot tangle"></div>
+                    <div class="tangle_bottom_left abstrot tangle"></div>
+                    <div class="tangle_bottom_right abstrot tangle"></div>
+                    <div class=" ptb10">
+                        <div>
+                            <div class="kefuinfo flex alcenter plr10 mr10">
+                                <img src="images/wx.png" alt="" class="wximg">
+                                <span class="copy_text" id="get_address">kmbchain</span>
+                            </div>
+                            <a href="javascript:;" class="copy miancolor ft14"  data-clipboard-action="copy" data-clipboard-target="#get_address">复制</a>
+                        </div>
+                        <img src="images/kefu.jpg" alt="" class="kefucode" id="kefucode">
+                        <p class="tc pt10">
+                            <a href="javascript:;" class="savecode miancolor">点击保存二维码</a>
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="javascripts/jquery.min.js"></script>
+    <script src="lib/layer_mobile/layer.js"></script>
+    <script src="javascripts/clipboard.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+       $(function(){
+        var content = $("#get_address").html();
+            var clipboard = new ClipboardJS('.copy', {
+                text: function() {
+                    return content;
+                }
+            });
+            clipboard.on('success', function(e) {
+                layer_msg('复制成功');
+            });
+
+            clipboard.on('error', function(e) {
+                layer_msg('复制失败');
+            });
+       })
+    </script>
+</body>
+</html>
