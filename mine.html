@@ -349,10 +349,10 @@
             })
 
             // 饼状图
-            initEchart([{ value: 000, name: 'all' }, { value: 000, name: 'total' }]);
+            initEchart([{ value: 600, name: 'all' }, { value: 200, name: '轮回收益' },{ value: 500, name: '分享收益' },{ value: 400, name: '间接分享收益' },{ value: 500, name: '派送糖果' }]);
             function initEchart(mydata) {
                 console.log(mydata)
-                var colors = ['#00A2DD', '#83e6f5'];
+                var colors = ['#00A2DD', '#83e6f5','#ceae1e','#02c5a1','#1a00dd'];
                 var i = 0;
                 option = {
                     tooltip: {
