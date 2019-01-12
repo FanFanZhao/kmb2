@@ -31,15 +31,12 @@
            text-indent: 0;
        }
     </style>
- <script>
-    //  alert('test');
- </script>
+
 </head>
 <body>
     <div class="mi-header fixed flex tc">
         <a href="javascript:history.go(-1);" class="back2"></a>
         <h1 class=" gold mauto ft18">BHC转账</h1>
-        <a href="transfer2.html" class="kefu2">互转</a>
     </div>
     <div class="mt45 mb55 plr20 miancolor ptb20 ">
         <div class="posRelt ptb20 plr20 bl_box pwd_setbox ">
@@ -48,13 +45,6 @@
             <div class="tangle_bottom_left abstrot tangle"></div>
             <div class="tangle_bottom_right abstrot tangle"></div>
             <div class="miancolor ptb10">
-                    <script>
-                    function fan_transfer(result){
-                        alert(123);
-                        $("#addr").val(result);
-                        alert(345);
-                    }
-                    </script>
                 <div class="mb10 flex alcenter ptb10 bdb">
                     <span class="pr10">收款地址</span>
                     <input type="text" id="addr" name="addr" placeholder="请输入收款人钱包地址" class="address flex1 ft10 ">
@@ -81,62 +71,6 @@
         <a href="share.html"><div class="three"></div><span>分享</span></a>
         <a href="mine.html" class="active "><div class="four"></div><span>账户</span></a>
     </div>
-    <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <!-- <script src="javascripts/clipboard.min.js"></script> -->
-    <script src="javascripts/main.js"></script>
-    <script>
-        $(function(){
-            //判断是否有支付密码
-            // if(window.name != "bencalie"){
-            //     location.reload();
-            //     window.name = "bencalie";
-            // }else{
-            //      window.name = "";
-            // }
-            $.ajax({
-                url:laravel_api +"/is_pay_password",
-                type:'get',
-                success:function(res){
-                    // alert(res.message,res.type)
-                    if(res.type=='error'){
-                        layer_msg(res.message);
-                        setInterval(function(){
-                            location.href='account_set.html';
-                        },1500);
-                        
-                    }
-                }
-            })
-            // function code(result){
-            //     $("#addr").val(result);
-            //     alert(123)
-            // }
-            $(".login_btn").click(function () {
-                var address = $("#addr").val();
-                var pay_password = $("#pay_password").val();
-                var number = parseFloat($("#number").val())
-                if (address == ""){
-                    layer_msg("请输入地址")
-                    return false
-                }
-                if (number == ""){
-                    layer_msg("请输入数量")
-                    return false
-                }
-                if (pay_password == ""){
-                    layer_msg("请输入支付密码")
-                    return false
-                }
-                initData({url:'/wallet/ltcSend',type:'post',data:{money:number,address:address,pay_password:pay_password}},function(message){
-                    layer_msg(message)
-                    setTimeout(() => {
-                        layer_close();
-                        window.location.href ="account_details.html";
-                    }, 1500);
-                })
-            })
-        })
-    </script>
+ 
 </body>
 </html>
