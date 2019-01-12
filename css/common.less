@@ -1,5 +1,5 @@
 html{width: 100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;font-family:PingFangSC-Regular,'微软雅黑',sans-serif;overflow-x: hidden}
-html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);box-sizing:border-box}
+html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-box-sizing:border-box;box-sizing:border-box}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}
 body{font-size: 12/@baserm;background:url(../images/bg.png) repeat-y ;background-size: 100%;overflow-x: hidden}
 input,select,textarea{font-size:100%;-webkit-appearance : none ;}
@@ -20,6 +20,15 @@ ins,a{text-decoration:none}
 .bgmainColor{background: #fff;color: #b4b4b4;}
 a{color:inherit;}
 input{border:0;outline:0;background: transparent;text-indent: 2em;color: #46D6EB;}
+::-webkit-input-placeholder{
+    color: #2a7a86;
+}
+:-ms-input-placeholder{
+    color: #2a7a86;
+}
+::-ms-input-placeholder{
+    color: #2a7a86;
+}
 ::placeholder{
     color: #2a7a86;
 }
@@ -78,19 +87,24 @@ input{border:0;outline:0;background: transparent;text-indent: 2em;color: #46D6EB
 .pb20{padding-bottom: 20/@baserm;}
 .ptb10{padding-top: 10/@baserm;padding-bottom: 10/@baserm;}
 .ptb5{padding-top: 5/@baserm;padding-bottom: 5/@baserm;}
-.flex{display: flex;}
-.flex2{flex: 2;}
+.flex{display: -webkit-box;display: -ms-flexbox;display: flex;}
+.flex2{-webkit-box-flex: 2;-ms-flex: 2;flex: 2;}
 .fldir{
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
-.between{justify-content: space-between;}
-.around{justify-content: space-around;}
-.alcenter{align-items: center;}
-.jscenter{justify-content: center;}
+.between{-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.around{-ms-flex-pack: distribute;justify-content: space-around;}
+.alcenter{-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
+.jscenter{-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;}
 .bold{font-weight: bold;}
 .gray{color: #B7B5B4}
-.mainbg{background-color: #46D6EB}
+.mainbg{background-color: #8b67ff}
 .red{color: #f20000}
 .red2{color: #8446eb;}
 .green{color: #0f813d}
@@ -103,7 +117,7 @@ input{border:0;outline:0;background: transparent;text-indent: 2em;color: #46D6EB
 }
 .colore3{color: #24c9cd}
 .miancolor{
-    color: #46D6EB;
+    color: #8b67ff;
 }
 
 .bgcolor2{
@@ -165,7 +179,7 @@ input{border:0;outline:0;background: transparent;text-indent: 2em;color: #46D6EB
 .bgf5{background: #f5f5f5;}
 .cheng{color: #f77321;}
 .fixed{position: fixed;}
-.flex1{flex: 1;}
+.flex1{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;}
 .blue{color: #37bac9}
 .overhide{overflow: hidden;}
 .redbg{
@@ -175,6 +189,7 @@ input{border:0;outline:0;background: transparent;text-indent: 2em;color: #46D6EB
     background-color: #00AA3B;
 }
 .bglinear{
+    background: -webkit-gradient(linear, left top, left bottom, from(#67C1FF), to(#6596FF));
     background: linear-gradient(#67C1FF, #6596FF);
 }
 
@@ -231,7 +246,8 @@ input:-webkit-autofill {
     width: 45/@baserm;
     height: 45/@baserm;
     background: url(../images/right_arrow.png) no-repeat center /46% 46%;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 
 }
 .kefu{
@@ -256,7 +272,9 @@ input:-webkit-autofill {
     width: 100%;
     /* border-bottom: 1/@baserm solid #37bac9; */
     background:url(../images/header_bg.png) no-repeat center /100% 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 45/@baserm;
     left: 0;
     top: 0;
@@ -308,31 +326,60 @@ input:-webkit-autofill {
 .outer{
     width: 60%;
     margin-left: -30%;
-    transform-origin:center center;
-    animation: spin 20s linear infinite;
+    -webkit-transform-origin:center center;
+            transform-origin:center center;
+    -webkit-animation: spin 20s linear infinite;
+            animation: spin 20s linear infinite;
 }
 .inner{
     width: 50%;
     margin-top: 5%;
     margin-left: -25%;
-    transform-origin:center center;
-    animation: spin_reverse 20s linear infinite;
+    -webkit-transform-origin:center center;
+            transform-origin:center center;
+    -webkit-animation: spin_reverse 20s linear infinite;
+            animation: spin_reverse 20s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
     from {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin_reverse {
+    from {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
     }
 }
 @keyframes spin_reverse {
     from {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
     to {
-        transform: rotate(-360deg);
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
     }
 }
 .tangle{
