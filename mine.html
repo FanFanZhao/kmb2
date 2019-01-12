@@ -169,9 +169,9 @@
                         <div class="coin co_rb1 bgrgba1 posRelt">
                             <div class="line bgrgb1 abstrot"></div>
                            <div class="flex fldir  contbox">
-                                <p class="coin_name ft14">KMB</p>
-                                <p class="coin_num ft14 white mt5 mtb10 kmbnum">0</p>
-                                <P class="flex alcenter mb10">可用 <span class="kmbnum pl5"></span></P>
+                                <p class="coin_name ft14">BHC</p>
+                                <p class="coin_num ft14 white mt5 mtb10 BHCnum">0</p>
+                                <P class="flex alcenter mb10">可用 <span class="BHCnum pl5"></span></P>
                                 <!-- <p class="flex alcenter">锁仓 <span class="pl5">0</span></p> -->
                            </div>
                         </div>
@@ -215,7 +215,7 @@
                     <img src="images/zz.png" />
                 </div>
                 </div>
-                <span class="mt10 miancolor">KMB转账</span>
+                <span class="mt10 miancolor">BHC转账</span>
             </a>
             <a href="balance.html" class="flex alcenter fldir flex1">
                 <div class="out_bg flex alcenter jscenter">
@@ -270,7 +270,7 @@
                         <div>
                             <div class="kefuinfo flex alcenter plr10 mr10">
                                 <img src="images/wx.png" alt="" class="wximg">
-                                <span class="copy_text" id="get_address">kmbchain</span>
+                                <span class="copy_text" id="get_address">BHCchain</span>
                             </div>
                             <a href="javascript:;" class="copy miancolor ft14"  data-clipboard-action="copy" data-clipboard-target="#get_address">复制</a>
                         </div>
@@ -319,8 +319,8 @@
                 $('.totalper').html((all/sum*100 || 0).toFixed(2)+'%')
                 $('.tgnum').html(total);
                 $('.tgper').html((total/sum*100||0).toFixed(2)+'%')
-                $('.kmbnum').html(balance);
-                // data=genData(['total','KMB','BTC','ETH'],[,,0,0]);
+                $('.BHCnum').html(balance);
+                // data=genData(['total','BHC','BTC','ETH'],[,,0,0]);
                 initEchart([{value:all,name:'all'},{value:total,name:'total'}]);
             })
             initData({url:'/user/getuserbyaddress',type:'post'},function(message){
