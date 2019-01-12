@@ -399,6 +399,9 @@ input {
 .co_rb3 {
   color: #02c5a1;
 }
+.co_rb4 {
+  color: #1a00dd;
+}
 .co_rba0 {
   color: #00a2dd;
 }
@@ -423,6 +426,9 @@ input {
 .bgrgb3 {
   background-color: #02c5a1;
 }
+.bgrgb4 {
+  background: #1a00dd;
+}
 .bgrgba0 {
   background: rgba(0, 162, 221, 0.2);
 }
@@ -434,6 +440,9 @@ input {
 }
 .bgrgba3 {
   background-color: rgba(2, 197, 161, 0.2);
+}
+.bgrgba4 {
+  background-color: rgba(26, 0, 221, 0.2);
 }
 .color85 {
   color: #2a7a86;
