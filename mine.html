@@ -21,7 +21,8 @@
             display: flex;
             align-items: center;
         }
-        .wrap{
+
+        .wrap {
             padding: 2rem 0.5rem 0 0.5rem;
         }
 
@@ -38,47 +39,58 @@
             border-radius: 50%;
             background: none;
         }
-        .right_msg{
-            width: 60%;
+
+        .right_msg {
+            width: 65%;
             padding: 0.2rem 0;
         }
-        .spot{
+
+        .spot {
             width: 0.3rem;
             height: 0.3rem;
             border-radius: 50%;
         }
-        .list{
+
+        .list {
             margin-bottom: 0.2rem;
         }
-        .list span{
+
+        .list span {
             display: inline-block;
         }
-        .spot_wrap{
+
+        .spot_wrap {
             width: 10%
         }
-        .even_name{
+
+        .even_name {
             width: 20%;
         }
-        .num{
+
+        .num {
             width: 30%;
         }
-        .percent{
-            width: 40%;
+
+        .percent {
+            width: 20%;
         }
-        .coin{
+
+        .coin {
             height: 3rem;
             width: 100%;
             padding-left: 0.3rem;
         }
-        .coin .contbox{
+
+        .coin .contbox {
             height: 100%;
         }
-       
-        .coin_num{
+
+        .coin_num {
             color: #fff;
             /* font-size: 0.7rem; */
         }
-        .excharge_withdraw>a{
+
+        .excharge_withdraw>a {
             width: 48%;
             text-align: center;
             line-height: 1rem;
@@ -87,49 +99,76 @@
             background: rgba(70, 214, 235, 0.18);
             display: block;
         }
-        .out_bg{
+
+        .out_bg {
             background: url('images/big.png') center no-repeat;
             background-size: 100%;
             justify-content: center;
             width: 1.5rem;
             height: 1.5rem;
         }
-        .in_bg{
+
+        .in_bg {
             background: url('images/circle.png') center no-repeat;
             background-size: 100%;
             justify-content: center;
             width: 1.5rem;
             height: 1.5rem;
         }
-        .in_bg img{
+
+        .in_bg img {
             width: .7rem;
         }
-        .mycontainer{
+
+        .mycontainer {
             margin-top: 1rem;
         }
-        .swiper-slide{
+
+        .swiper-slide {
             width: 100%;
             /* padding-right: 20px; */
         }
-        .line{
+
+        .line {
             width: .08rem;
             height: 100%;
             left: 0;
             top: 0;
         }
-       
+
+        .right_msg ul li span:nth-child(2) {
+            width: 60%;
+        }
+
+        .cir_msg {
+            align-items: center;
+        }
+
+        .bal_wrap {
+            padding: 8px 25px;
+            padding-bottom: 0;
+        }
+
+        .address {
+            margin-left: 10px;
+
+        }
+
+        .address_p {
+            padding-left: 25px;
+        }
     </style>
 </head>
+
 <body>
     <!--头部-->
     <div class="mi-header fixed flex tc">
         <!-- <a href="javascript:;" class="back" onclick="BSL.Qcode('0','code')"></a> -->
-        <h1 class=" gold mauto ft18 "><span class="account"></span> <img class="arrow" src="images/right_arrow.png" /></h1>
-        <a href="javascript:;" class="kefu"></a>
+        <h1 class=" gold mauto ft18 "><span class="account">18888886666</span> <img class="arrow" src="images/right_arrow.png" /></h1>
     </div>
     <div class="wrap mb55">
         <div class="cir_msg flex between">
-            
+
             <div class="out_cir flex alcenter jscenter mr10">
                 <div id="chart1" style="width: 3rem;height: 3rem;"></div>
             </div>
@@ -137,16 +176,35 @@
                 <ul>
                     <li class="flex list co_rba0 alcenter">
                         <span class="spot bgrgb0 mr5"></span>
-                        <span class="even_name ">挖矿</span>
+                        <span class="even_name ">总收益</span>
                         <span class="num totalnum">0</span>
                         <span class="percent tr totalper">0.10%</span>
                     </li>
                     <li class="flex list co_rb1 alcenter">
                         <span class="spot bgrgb1 mr5"></span>
-                        <span class="even_name ">推广</span>
+                        <span class="even_name ">轮回收益</span>
                         <span class="num tgnum">0</span>
                         <span class="percent tr tgper">0.30%</span>
                     </li>
+                    <li class="flex list co_rb1 alcenter">
+                        <span class="spot bgrgb1 mr5"></span>
+                        <span class="even_name ">分享收益</span>
+                        <span class="num tgnum">0</span>
+                        <span class="percent tr tgper">0.30%</span>
+                    </li>
+                    <li class="flex list co_rb1 alcenter">
+                        <span class="spot bgrgb1 mr5"></span>
+                        <span class="even_name ">间接分享收益</span>
+                        <span class="num tgnum">0</span>
+                        <span class="percent tr tgper">0.30%</span>
+                    </li>
+                    <li class="flex list co_rb1 alcenter">
+                        <span class="spot bgrgb1 mr5"></span>
+                        <span class="even_name ">派送糖果</span>
+                        <span class="num tgnum">0</span>
+                        <span class="percent tr tgper">0.30%</span>
+                    </li>
+
                     <!-- <li class="flex list co_rb2">
                         <span class="spot_wrap"><span class="spot bgrgb2"></span></span>
                         <span class="even_name">BTC</span>
@@ -168,12 +226,23 @@
                     <section class="levelbox">
                         <div class="coin co_rb1 bgrgba1 posRelt">
                             <div class="line bgrgb1 abstrot"></div>
-                           <div class="flex fldir  contbox">
-                                <p class="coin_name ft14">KMB</p>
-                                <p class="coin_num ft14 white mt5 mtb10 kmbnum">0</p>
-                                <P class="flex alcenter mb10">可用 <span class="kmbnum pl5"></span></P>
-                                <!-- <p class="flex alcenter">锁仓 <span class="pl5">0</span></p> -->
-                           </div>
+                            <div>
+                                <div class="flex alcenter bal_wrap between">
+                                    <div class="flex fldir  contbox">
+                                        <p class="coin_name ft14">BHC总余额</p>
+                                        <p class="coin_num ft14 white mt5 mtb10 kmbnum">0</p>
+                                        <P class="flex alcenter mb10">可用余额 <span class="kmbnum pl5">0</span></P>
+                                        <!-- <p class="flex alcenter">锁仓 <span class="pl5">0</span></p> -->
+                                    </div>
+                                    <div class="flex fldir  contbox">
+                                        <p class="coin_name ft14">赠送糖果总余额</p>
+                                        <p class="coin_num ft14 white mt5 mtb10 kmbnum">0</p>
+                                        <P class="flex alcenter mb10">可用余额 <span class="kmbnum pl5">0</span></P>
+                                        <!-- <p class="flex alcenter">锁仓 <span class="pl5">0</span></p> -->
+                                    </div>
+                                </div>
+                                <p class="address_p">我的地址：<span class="address">x0fdgfhdfht42fd52ht2hftht</span></p>
+                            </div>
                         </div>
                     </section>
                 </section>
@@ -195,10 +264,10 @@
                         </div>
                     </section>
                 </section> -->
-            </section> 
+            </section>
         </section>
-    
-        
+
+
         <!--转账-->
         <!-- <div class="excharge_withdraw flex between mt30">
            <div class="excharge ft18 miancolor">充</div>
@@ -211,11 +280,11 @@
         <div class="flex alcenter between mt20">
             <a href="transfer.html" class="flex alcenter fldir flex1">
                 <div class="out_bg flex alcenter jscenter">
-                <div class="in_bg flex alcenter jscenter">
-                    <img src="images/zz.png" />
+                    <div class="in_bg flex alcenter jscenter">
+                        <img src="images/zz.png" />
+                    </div>
                 </div>
-                </div>
-                <span class="mt10 miancolor">KMB转账</span>
+                <span class="mt10 miancolor">BHC提币</span>
             </a>
             <a href="balance.html" class="flex alcenter fldir flex1">
                 <div class="out_bg flex alcenter jscenter">
@@ -251,7 +320,7 @@
         <a href="lists.html" class=''>
             <div class="two"></div><span>机市</span>
         </a>
-        <a href="share.html" >
+        <a href="share.html">
             <div class="three"></div><span>分享</span>
         </a>
         <a href="mine.html" class="active">
@@ -261,157 +330,89 @@
     <div class="layer_box_kefu">
         <div class="con_box ">
             <div class="tc ft14 posRelt mb20 miancolor">联系客服 <img src="images/close.png" alt="" class="close"></div>
-                <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
-                    <div class="tangle_left abstrot tangle"></div>
-                    <div class="tangle_right abstrot tangle"></div>
-                    <div class="tangle_bottom_left abstrot tangle"></div>
-                    <div class="tangle_bottom_right abstrot tangle"></div>
-                    <div class=" ptb10">
-                        <div>
-                            <div class="kefuinfo flex alcenter plr10 mr10">
-                                <img src="images/wx.png" alt="" class="wximg">
-                                <span class="copy_text" id="get_address">kmbchain</span>
-                            </div>
-                            <a href="javascript:;" class="copy miancolor ft14"  data-clipboard-action="copy" data-clipboard-target="#get_address">复制</a>
+            <div class="posRelt ptb10 plr20 bl_box pwd_setbox mb20">
+                <div class="tangle_left abstrot tangle"></div>
+                <div class="tangle_right abstrot tangle"></div>
+                <div class="tangle_bottom_left abstrot tangle"></div>
+                <div class="tangle_bottom_right abstrot tangle"></div>
+                <div class=" ptb10">
+                    <div>
+                        <div class="kefuinfo flex alcenter plr10 mr10">
+                            <img src="images/wx.png" alt="" class="wximg">
+                            <span class="copy_text" id="get_address">kmbchain</span>
                         </div>
-                        <img src="images/kefu.jpg" alt="" class="kefucode" id="kefucode">
-                        <p class="tc pt10">
-                            <a href="javascript:;" class="savecode miancolor">点击保存二维码</a>
-                        </p>
+                        <a href="javascript:;" class="copy miancolor ft14" data-clipboard-action="copy"
+                            data-clipboard-target="#get_address">复制</a>
                     </div>
+                    <img src="images/kefu.jpg" alt="" class="kefucode" id="kefucode">
+                    <p class="tc pt10">
+                        <a href="javascript:;" class="savecode miancolor">点击保存二维码</a>
+                    </p>
                 </div>
+            </div>
         </div>
     </div>
     <script src="javascripts/jquery.min.js"></script>
-    <script src="lib/layer_mobile/layer.js"></script>
-    <script src="javascripts/clipboard.min.js"></script>
     <script src="javascripts/main.js"></script>
-    <script src="lib/swiper.min.js"></script>
     <script src="javascripts/echarts.min.js"></script>
     <script>
-        $(function(){
-            
-            var data;
+        $(function () {
+            $('.account').click(function () {
+                location.href = 'account_set.html';
+            })
 
-            var swiper = new Swiper('.mycontainer', {
-                slidesPerView: 'auto',
-                on:{
-                transitionEnd: function(){
-                    console.log(swiper)
-                    current = swiper.progress>0?1:0;
-                    i = current;
-                    // console.log(swiper,current)
-                    $('.level_con').eq(current).show().siblings('.level_con').hide();
-                    $('.top-tab span').eq(current).addClass('active').siblings().removeClass()
-                },
-                },
-            });
-            $('.account').click(function(){
-                location.href='account_set.html';
-            })
-            initData({url:'/ltcReturnDetail'},function(res){
-                console.log(res);
-                var all=res.total_ltc-0;
-                var total=res.total_return-0;
-                var balance=res.balance;
-                var sum=all+total;
-                $('.totalnum').html(all);
-                $('.totalper').html((all/sum*100 || 0).toFixed(2)+'%')
-                $('.tgnum').html(total);
-                $('.tgper').html((total/sum*100||0).toFixed(2)+'%')
-                $('.kmbnum').html(balance);
-                // data=genData(['total','KMB','BTC','ETH'],[,,0,0]);
-                initEchart([{value:all,name:'all'},{value:total,name:'total'}]);
-            })
-            initData({url:'/user/getuserbyaddress',type:'post'},function(message){
-                $(".account").html(message.account_number);
-            })
-            function genData(names,numbers){
-                var legendData = names;
-                var seriesData = [];
-                var selected = {};
-                for(var i in names){
-                    console.log(i,names[i])
-                    // seriesData[i]['name']=names[i];
-                    seriesData.push({name:names[i]})
-                    selected[names[i]]=true;
-                }
-                for(var i in numbers){
-                    seriesData[i].value=numbers[i];
-                }
-              console.log(legendData,seriesData,selected)
-                return {
-                    legendData: legendData,
-                    seriesData: seriesData,
-                    selected: selected
-                };
-            }
             // 饼状图
-
-            function initEchart(mydata){
+            initEchart([{ value: 000, name: 'all' }, { value: 000, name: 'total' }]);
+            function initEchart(mydata) {
                 console.log(mydata)
-                var colors=['#00A2DD','#83e6f5'];
-                var i=0;
+                var colors = ['#00A2DD', '#83e6f5'];
+                var i = 0;
                 option = {
-                    tooltip : {
+                    tooltip: {
                         trigger: 'item',
-                        show:false,
+                        show: false,
                         formatter: "{b} : {c} ({d}%)",
-                       
-                    },
-                    series : [
-                    {
-                        name:'种类',
-                        type:'pie',
-                        radius : '75%',
-                        center: ['50%', '50%'],
-                        data:mydata,
-                        // roseType: 'radius',
-                        label: {
-                            normal: {
-                                show:false,
-                                textStyle: {
-                                    color: 'rgba(255, 255, 255, 0.3)'
-                                }
-                            }
-                        },
-                        
-                        itemStyle: {
-                            normal: {
-                                color: function(){  
-                                     return colors[i++];   
-                                },
-                                shadowBlur: 200,
-                                shadowColor: 'rgba(0, 0, 0, 0.5)'
-                            }
-                        },
 
-                        animationType: 'scale',
-                        animationEasing: 'elasticOut',
-                        animationDelay: function (idx) {
-                            return Math.random() * 200;
+                    },
+                    series: [
+                        {
+                            name: '种类',
+                            type: 'pie',
+                            radius: '75%',
+                            center: ['50%', '50%'],
+                            data: mydata,
+                            // roseType: 'radius',
+                            label: {
+                                normal: {
+                                    show: false,
+                                    textStyle: {
+                                        color: 'rgba(255, 255, 255, 0.3)'
+                                    }
+                                }
+                            },
+
+                            itemStyle: {
+                                normal: {
+                                    color: function () {
+                                        return colors[i++];
+                                    },
+                                    shadowBlur: 200,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+
+                            animationType: 'scale',
+                            animationEasing: 'elasticOut',
+                            animationDelay: function (idx) {
+                                return Math.random() * 200;
+                            }
                         }
-                    }
-                ]
+                    ]
                 };
                 var myChart1 = echarts.init(document.getElementById('chart1'));
                 myChart1.setOption(option);
             }
-
-        var content = $("#get_address").html();
-            var clipboard = new ClipboardJS('.copy', {
-                text: function() {
-                    return content;
-                }
-            });
-            clipboard.on('success', function(e) {
-                layer_msg('复制成功');
-            });
-
-            clipboard.on('error', function(e) {
-                layer_msg('复制失败');
-            });  
-    })
+        })
     </script>
 </body>
 

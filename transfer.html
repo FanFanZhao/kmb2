@@ -38,7 +38,7 @@
 <body>
     <div class="mi-header fixed flex tc">
         <a href="javascript:history.go(-1);" class="back2"></a>
-        <h1 class=" gold mauto ft18">KMB转账</h1>
+        <h1 class=" gold mauto ft18">BHC提币</h1>
         <a href="transfer2.html" class="kefu2">互转</a>
     </div>
     <div class="mt45 mb55 plr20 miancolor ptb20 ">
@@ -83,35 +83,10 @@
     </div>
     <script src="javascripts/jquery.min.js"></script>
     <script src="lib/layer_mobile/layer.js"></script>
-    <!-- <script src="javascripts/clipboard.min.js"></script> -->
     <script src="javascripts/main.js"></script>
     <script>
         $(function(){
-            //判断是否有支付密码
-            // if(window.name != "bencalie"){
-            //     location.reload();
-            //     window.name = "bencalie";
-            // }else{
-            //      window.name = "";
-            // }
-            $.ajax({
-                url:laravel_api +"/is_pay_password",
-                type:'get',
-                success:function(res){
-                    // alert(res.message,res.type)
-                    if(res.type=='error'){
-                        layer_msg(res.message);
-                        setInterval(function(){
-                            location.href='account_set.html';
-                        },1500);
-                        
-                    }
-                }
-            })
-            // function code(result){
-            //     $("#addr").val(result);
-            //     alert(123)
-            // }
+           
             $(".login_btn").click(function () {
                 var address = $("#addr").val();
                 var pay_password = $("#pay_password").val();
@@ -128,13 +103,7 @@
                     layer_msg("请输入支付密码")
                     return false
                 }
-                initData({url:'/wallet/ltcSend',type:'post',data:{money:number,address:address,pay_password:pay_password}},function(message){
-                    layer_msg(message)
-                    setTimeout(() => {
-                        layer_close();
-                        window.location.href ="account_details.html";
-                    }, 1500);
-                })
+                
             })
         })
     </script>
